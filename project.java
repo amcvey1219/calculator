@@ -1,5 +1,5 @@
 package aaronKalebProject;
-
+//imports for the gui
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -25,15 +25,18 @@ public class project implements ActionListener {
 	char operator;
 	
 	public project() {
+		//window layout
 		frame = new JFrame("Calculator App");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(420,550);
 		frame.setLayout(null);
-		
+
+		//calc 'window'/text field for calculations
 		textfield = new JTextField();
 		textfield.setBounds(50,25,300,50);
 		textfield.setEditable(false);
-		
+
+		//buttons
 		one = new JButton("1");
 		two = new JButton("2");
 		three = new JButton("3");
@@ -60,7 +63,8 @@ public class project implements ActionListener {
 		divide = new JButton("/");
 		delete = new JButton("Delete");
 		clear = new JButton("Clear");
-		
+
+		//sets button placements
 		one.setBounds(50,120,70,50);
 		two.setBounds(125,120,70,50);
 		three.setBounds(200,120,70,50);
@@ -83,7 +87,8 @@ public class project implements ActionListener {
 		
 		delete.setBounds(50,430,145,50);
 		clear.setBounds(205,430,145,50);
-		
+
+		//adds buttons to the window
 		frame.add(one);
 		frame.add(two);
 		frame.add(three);
@@ -110,7 +115,7 @@ public class project implements ActionListener {
 		frame.add(textfield);
 		frame.setVisible(true);
 	}
-	
+	//instantiates the project so it can run
 	public static void main(String[] args) {
 		
 		project proj = new project();
@@ -118,7 +123,7 @@ public class project implements ActionListener {
 
 	}
 	@Override
-	// method to execute when calcButton are pressed
+	// method to execute when buttons are pressed
 		public void actionPerformed(ActionEvent e) {
 		if (e.getSource()==one) {
 			
